@@ -1,0 +1,171 @@
+ffprobe version 2021-08-08-git-ac0408522a-full_build-www.gyan.dev Copyright (c) 2007-2021 the FFmpeg developers                                                                                                      
+built with gcc 10.3.0 (Rev5, Built by MSYS2 project)                                                                                                                                                               
+configuration: --enable-gpl --enable-version3 --enable-static --disable-w32threads --disable-autodetect --enable-fontconfig --enable-iconv --enable-gnutls --enable-libxml2 --enable-gmp --enable-lzma --enable-li 
+bsnappy --enable-zlib --enable-librist --enable-libsrt --enable-libssh --enable-libzmq --enable-avisynth --enable-libbluray --enable-libcaca --enable-sdl2 --enable-libdav1d --enable-libzvbi --enable-librav1e --en 
+able-libsvtav1 --enable-libwebp --enable-libx264 --enable-libx265 --enable-libxvid --enable-libaom --enable-libopenjpeg --enable-libvpx --enable-libass --enable-frei0r --enable-libfreetype --enable-libfribidi --e
+nable-libvidstab --enable-libvmaf --enable-libzimg --enable-amf --enable-cuda-llvm --enable-cuvid --enable-ffnvcodec --enable-nvdec --enable-nvenc --enable-d3d11va --enable-dxva2 --enable-libmfx --enable-libglsla 
+ng --enable-vulkan --enable-opencl --enable-libcdio --enable-libgme --enable-libmodplug --enable-libopenmpt --enable-libopencore-amrwb --enable-libmp3lame --enable-libshine --enable-libtheora --enable-libtwolame  
+--enable-libvo-amrwbenc --enable-libilbc --enable-libgsm --enable-libopencore-amrnb --enable-libopus --enable-libspeex --enable-libvorbis --enable-ladspa --enable-libbs2b --enable-libflite --enable-libmysofa --en 
+able-librubberband --enable-libsoxr --enable-chromaprint                                                                                                                                                             
+libavutil      57.  3.100 / 57.  3.100                                                                                                                                                                             
+libavcodec     59.  4.101 / 59.  4.101                                                                                                                                                                             
+libavformat    59.  4.101 / 59.  4.101                                                                                                                                                                             
+libavdevice    59.  0.100 / 59.  0.100                                                                                                                                                                             
+libavfilter     8.  1.103 /  8.  1.103                                                                                                                                                                             
+libswscale      6.  0.100 /  6.  0.100                                                                                                                                                                             
+libswresample   4.  0.100 /  4.  0.100                                                                                                                                                                             
+libpostproc    56.  0.100 / 56.  0.100                                                                                                                                                                             
+[matroska,webm @ 000002c717c696c0] Invalid value of WAVEFORMATEXTENSIBLE_CHANNEL_MASK                                                                                                                                
+[matroska,webm @ 000002c717c696c0] Could not find codec parameters for stream 3 (Subtitle: hdmv_pgs_subtitle (pgssub)): unspecified size                                                                             
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options                                                                                                                        
+[matroska,webm @ 000002c717c696c0] Could not find codec parameters for stream 4 (Subtitle: hdmv_pgs_subtitle (pgssub)): unspecified size                                                                             
+Consider increasing the value for the 'analyzeduration' (0) and 'probesize' (5000000) options                                                                                                                        
+Input #0, matroska,webm, from '快乐天堂滚石30演唱会Happy.Paradise.Rock.Records.30th.Anniversary.Live.In.Taipei.2010.mkv':                                                                                            
+Metadata:                                                                                                                                                                                                          
+  encoder         : libebml v1.3.0 + libmatroska v1.4.1                                                                                                                                                            
+  creation_time   : 2013-12-06T00:10:46.000000Z
+Duration: 05:19:28.22, start: 0.000000, bitrate: 17696 kb/s                                                                                                                                                        
+Chapters:                                                                                                                                                                                                          
+  Chapter #0:0: start 0.000000, end 226.026000                                                                                                                                                                     
+    Metadata:                                                                                                                                                                                                      
+      title           : 01 快乐天堂 / 泰武国小合唱团                                                                                                                                                               
+  Chapter #0:1: start 226.026000, end 376.142000                                                                                                                                                                   
+    Metadata:                                                                                                                                                                                                      
+      title           : 02 凡人歌 / 伍佰&ChinaBlue 五月天 张震岳&FREE9                                                                                                                                             
+  Chapter #0:2: start 376.142000, end 497.831000                                                                                                                                                                   
+    Metadata:                                                                                                                                                                                                      
+      title           : 03 梦醒时分 / 伍佰&ChinaBlue 04 恋曲1980 / 五月天                                                                                                                                          
+  Chapter #0:3: start 497.831000, end 638.505000                                                                                                                                                                   
+    Metadata:                                                                                                                                                                                                      
+      title           : 04 恋曲1980 / 五月天
+  Chapter #0:4: start 638.505000, end 770.570000                                                                                                                                                                   
+    Metadata:                                                                                                                                                                                                      
+      title           : 05 爱情酿的酒 / 张震岳&FREE9                                                                                                                                                               
+  Chapter #0:5: start 770.570000, end 1081.747000                                                                                                                                                                  
+    Metadata:                                                                                                                                                                                                      
+      title           : 06 鹿港小镇 / 伍佰&ChinaBlue 五月天 张震岳&FREE9                                                                                                                                           
+  Chapter #0:6: start 1081.747000, end 1441.407000                                                                                                                                                                 
+    Metadata:                                                                                                                                                                                                      
+      title           : 07 回家 / 顺子 08 情人 / 杜德伟                                                                                                                                                            
+  Chapter #0:7: start 1441.407000, end 1649.114000                                                                                                                                                                 
+    Metadata:                                                                                                                                                                                                      
+      title           : 08 情人 / 杜德伟                                                                                                                                                                           
+  Chapter #0:8: start 1649.114000, end 1882.814000
+    Metadata:                                                                                                                                                                                                      
+      title           : 09 钟爱一生+爱我别走 / 杜德伟 张震岳                                                                                                                                                       
+  Chapter #0:9: start 1882.814000, end 2106.938000                                                                                                                                                                 
+    Metadata:                                                                                                                                                                                                      
+      title           : 10 星星堆满天 / 杨乃文                                                                                                                                                                     
+  Chapter #0:10: start 2106.938000, end 2267.365000                                                                                                                                                                
+    Metadata:                                                                                                                                                                                                      
+      title           : 11 我爱台妹 / 热狗MC HotDog 顺子 张震岳                                                                                                                                                    
+  Chapter #0:11: start 2267.365000, end 2420.652000                                                                                                                                                                
+    Metadata:                                                                                                                                                                                                      
+      title           : 12 跆拳道 / 马念先                                                                                                                                                                         
+  Chapter #0:12: start 2420.652000, end 2650.781000                                                                                                                                                                
+    Metadata:                                                                                                                                                                                                      
+      title           : 13 爱的初体验 / 张震岳&FREE9                                                                                                                                                               
+  Chapter #0:13: start 2650.781000, end 2814.578000                                                                                                                                                                
+    Metadata:                                                                                                                                                                                                      
+      title           : 14 嗨嗨人生 / 热狗MC HotDog 张震岳 顽童                                                                                                                                                    
+  Chapter #0:14: start 2814.578000, end 3108.605000                                                                                                                                                                
+    Metadata:                                                                                                                                                                                                      
+      title           : 15 拯救地球+脱掉 / 杜德伟                                                                                                                                                                  
+  Chapter #0:15: start 3108.605000, end 3288.685000                                                                                                                                                                
+    Metadata:                                                                                                                                                                                                      
+      title           : 16 你的歌 / 吴楚楚                                                                                                                                                                         
+  Chapter #0:16: start 3288.685000, end 3520.517000                                                                                                                                                                
+title           : 50 人生海海 / 五月天                                                                                     
+Chapter #0:50: start 12669.957000, end 13054.808000                                                                            
+Metadata:                                                                                                                    
+title           : 01 拥挤的乐园+秀，我还是要上 / 陈升 曹启泰                                                               
+Chapter #0:51: start 13054.808000, end 13314.668000                                                                            
+Metadata:                                                                                                                    
+title           : 02 宁夏 / 李正帆 郁可唯
+Chapter #0:52: start 13314.668000, end 13545.965000                                                                            
+Metadata:
+title           : 03 北京一夜 / 陈升 郁可唯                                                                                
+Chapter #0:53: start 13545.965000, end 13731.751000                                                                            
+Metadata:
+title           : 04 把悲伤留给自己 / 陈升                                                                                 
+Chapter #0:54: start 13731.751000, end 13890.476000
+Metadata:                                                                                                                    
+title           : 05 SUMMER / 陈升                                                                                         
+Chapter #0:55: start 13890.476000, end 14015.701000
+Metadata:                                                                                                                    
+title           : 06 春娇和志明 / 潘越云 陈升                                                                              
+Chapter #0:56: start 14015.701000, end 14295.748000                                                                            
+Metadata:                                                                                                                    
+title           : 07 桂花巷+纯情青春梦+情字这条路 / 潘越云 (陈升)                                                          
+Chapter #0:57: start 14295.748000, end 14611.997000
+Metadata:                                                                                                                    
+title           : 08 回+每次都想呼喊你的名字 / 李恕权                                                                      
+Chapter #0:58: start 14611.997000, end 14999.351000                                                                            
+Metadata:                                                                                                                    
+title           : 09 茶室春秋+舞池 / 潘越云 王识贤 陈升                                                                    
+Chapter #0:59: start 14999.351000, end 15459.944000                                                                            
+Metadata:                                                                                                                    
+title           : 10 天天天蓝+浮生千山路+我的思念+再见离别+无言的歌 / 潘越云                                               
+Chapter #0:60: start 15459.944000, end 15598.082000                                                                            
+Metadata:                                                                                                                    
+title           : 11 鼓声若响 / 陈升 潘越云 曹启泰                                                                         
+Chapter #0:61: start 15598.082000, end 15862.847000                                                                            
+Metadata:                                                                                                                    
+title           : 12 爱情的尽头 / 伍佰&ChinaBlue                                                                           
+Chapter #0:62: start 15862.847000, end 16098.382000                                                                            
+Metadata:                                                                                                                    
+title           : 13 树枝孤鸟 / 伍佰&ChinaBlue                                                                             
+Chapter #0:63: start 16098.382000, end 16278.195000                                                                            
+Metadata:                                                                                                                    
+title           : 14 挪威的森林 / 伍佰&ChinaBlue                                                                           
+Chapter #0:64: start 16278.195000, end 16395.345000
+Metadata:                                                                                                                    
+title           : 15 Lemon Tree / 苏慧伦                                                                                   
+Chapter #0:65: start 16395.345000, end 16570.654000                                                                            
+Metadata:                                                                                                                    
+title           : 16 被动 / 苏慧伦 伍佰                                                                                    
+Chapter #0:66: start 16570.654000, end 16773.924000                                                                            
+Metadata:                                                                                                                    
+title           : 17 追追追 / 黄妃 苏慧伦                                                                                  
+Chapter #0:67: start 16773.924000, end 16947.931000                                                                            
+Metadata:                                                                                                                    
+title           : 18 爱情限时批 / 黄妃 伍佰                                                                                
+Chapter #0:68: start 16947.931000, end 17149.065000                                                                            
+Metadata:                                                                                                                    
+title           : 19 来去夏威夷 / 李炳辉 伍佰
+Chapter #0:69: start 17149.065000, end 17317.099000                                                                            
+Metadata:                                                                                                                    
+title           : 20 闪着泪光的决定 / 吴佩慈 伍佰                                                                          
+Chapter #0:70: start 17317.099000, end 17594.243000                                                                            
+Metadata:                                                                                                                    
+title           : 21 坚强的理由 / 莫文蔚 伍佰                                                                              
+Chapter #0:71: start 17594.243000, end 17762.478000                                                                            
+Metadata:                                                                                                                    
+title           : 22 没时间 / 莫文蔚 伍佰                                                                                  
+Chapter #0:72: start 17762.478000, end 17984.266000                                                                            
+Metadata:                                                                                                                    
+title           : 23 很爱很爱你 / 刘若英 伍佰                                                                              
+Chapter #0:73: start 17984.266000, end 18235.717000
+Metadata:                                                                                                                    
+title           : 24 浪人情歌 / 伍佰 刘若英                                                                                
+Chapter #0:74: start 18235.717000, end 18673.221000                                                                            
+Metadata:                                                                                                                    
+title           : 25 爱你一万年 / 伍佰 陈升                                                                                
+Chapter #0:75: start 18673.221000, end 19168.216000                                                                            
+Metadata:                                                                                                                    
+title           : 26 快乐天堂 / 大合唱                                                                                     
+Stream #0:0(eng): Video: h264 (High), yuv420p(progressive), 1920x1080 [SAR 1:1 DAR 16:9], 29.97 fps, 29.97 tbr, 1k tbn (default) 
+Metadata:                                                                                                                      
+title           : MPEG-4 x264@High Profile L4.1, 30 /1.001 fps @ 13900 kbps                                                  
+Stream #0:1(chi): Audio: dts (DTS-HD MA), 48000 Hz, 5.1(side), s16p (default)                                                    
+Metadata:                                                                                                                      
+title           : Mandarin DTS-HD Master Audio 5.1 @ 2757 kbps                                                               
+Stream #0:2(chi): Audio: flac, 48000 Hz, stereo, s16                                                                             
+Metadata:                                                                                                                      
+title           : Mandarin Flac 2.0 @ 953 kbps                                                                               
+Stream #0:3(chi): Subtitle: hdmv_pgs_subtitle                                                                                    
+Metadata:                                                                                                                      
+title           : Cht/SUP 原盘繁体                                                                                           
+Stream #0:4(chi): Subtitle: hdmv_pgs_subtitle (default)                                                                          
+Metadata:                                                                                                                      
+title           : Chs/SUP 原盘简体                                                                                                                                                                               
