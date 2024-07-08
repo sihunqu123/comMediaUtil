@@ -137,7 +137,8 @@ public class SubtitleUtil {
 	}
 	
 	public static void main(String[] args) throws Exception {
-//		condenseSubtitle("E:\\Downloads\\Wolf.Creek.S01.2160p.WEB.X265-DEFLATE\\Wolf.Creek.S01E02.INTERNAL.2160p.WEB.X265-DEFLATE_3(eng)_English (SDH).srt");
+		// condenseSubtitle("E:\\Downloads\\Wolf.Creek.S01.2160p.WEB.X265-DEFLATE\\Wolf.Creek.S01E02.INTERNAL.2160p.WEB.X265-DEFLATE_3(eng)_English (SDH).srt");
+		condenseSubtitle("C:\\Users\\tiantc\\Downloads\\Mister.880.English-WWW.MY-SUBS.CO.srt");
 		// test probe
 //		probeSubtitle("E:\\Downloads\\Wolf.Creek.S01.2160p.WEB.X265-DEFLATE\\Wolf.Creek.S01E01.INTERNAL.2160p.WEB.X265-DEFLATE.mkv");
 		
@@ -146,11 +147,11 @@ public class SubtitleUtil {
 //		removeCloseCaptionTag(new File("D:\\THREE_STOOGES_1940_1942_V3D2\\a_0[0x1e0]_closedCaption.srt"));
 		
 		
-//		extractCondensedSubtitlesInFolder("E:\\Downloads\\Wolf.Creek.S02.1080p\\", 10);
+//		extractCondensedSubtitlesInFolder("E:\\Downloads\\Creepshow.S01-2-3\\", 10);
 		
 		
 //		extractCondensedSubtitlesInFolder("D:\\TheThreeStooges\\", 100);
-		extractCondensedSubtitles("D:\\TheThreeStooges\\THREE_STOOGES_1946_1948 V5D1\\VTS_15_1.VOB");
+//		extractCondensedSubtitles("D:\\TheThreeStooges\\THREE_STOOGES_1946_1948 V5D1\\VTS_15_1.VOB");
 //		extractCondensedSubtitles("D:\\TheThreeStooges\\todo\\THREE_STOOGES_ULTIMATE_COLL_D18_extracted\\Part_1.vob");
 //		extractCondensedSubtitlesInFolder("D:\\TheThreeStooges\\todo\\THREE_STOOGES_1955_1959 V8D3_extracted\\", 100);
 		

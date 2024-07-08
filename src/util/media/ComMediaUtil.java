@@ -16,14 +16,18 @@ import java.util.Arrays;
 import java.util.List;
 
 import model.SubtitleStream;
+import model.VideoDuration;
+import model.VideoResolution;
 import util.commonUtil.ComCMDUtil;
 import util.commonUtil.ComFileUtil;
 import util.commonUtil.ComLogUtil;
 import util.commonUtil.ComRegexUtil;
 import util.commonUtil.ComStrUtil;
 import util.commonUtil.ConfigManager;
+import util.commonUtil.model.CheckResult;
 import util.commonUtil.model.FileInfo;
 import util.commonUtil.model.FileName;
+import util.commonUtil.model.RegRule;
 import util.helper.FileNameEscaper;
 
 public class ComMediaUtil {
@@ -169,13 +173,19 @@ public class ComMediaUtil {
 
 
 	private static List<String> vidoeExtensions = Arrays.asList(
+//			"iso",
 			"mkv",
 			"avi",
 			"flv",
 			"webm",
+			"rmvb",
 			"ts",
 			"vob",
+			"mov",
+			"m2ts",
 			"wmv",
+			"wmv",
+//			"flac", // handle music file the same as video files temporally, need to remove this and create a musicExtensions later
 			"mp4"
 	);
 	
@@ -192,6 +202,7 @@ public class ComMediaUtil {
 	private static List<String> txtExtensions = Arrays.asList(
 			"txt",
 			"text",
+			"log",
 			"md"
 	);
 	
@@ -226,17 +237,62 @@ public class ComMediaUtil {
 			"m3u",
 			"exe",
 			"rtf",
+			"ecp",
 			"sfv",
 			"td",
+			"scr",
 			"downloading",
 			"qdl2",
 			"md5",
 			"nfo"
 	);
 	
+	/**
+	 * @return [ reg, isCaseSensitive ]
+	 */
+	private static RegRule[] junkFileNames = new RegRule [] {
+		new RegRule("javplayer", false),
+		new RegRule("モザイク破壊版", false), // this is NOT leak version, so it's low quality
+		new RegRule("破坏版", false), // this is NOT leak version, so it's low quality
+		new RegRule("4K_180x180", false), // 4k is too low for VR
+		new RegRule("_1440p[_\\.]", false),
+		new RegRule("_1600p[_\\.]", false),
+		new RegRule("_1920p[_\\.]", false),
+		new RegRule("^QR-1024\\.[^\\\\]+$", false),
+		new RegRule("^宣传图\\.jpg$", false),
+		new RegRule("^网址收藏~.jpg$", false),
+		
+		new RegRule("^歡迎加入.jpg$", false),
+		new RegRule("^歡迎加入.jpg$", false),
+		new RegRule("thumbs.jpg$", false),
+		
+		
+		new RegRule("^撸一发吧 撸一发吧永久地址发布页.png$", false),
+		
+		
+		new RegRule("^.*色中色论坛地址.*.jpg$", false),
+		
+		new RegRule("_TB.mp4$", false),	
+		new RegRule("^sample.mp4$", false),	
+		new RegRule("solji.kim.pdf", false),
+		new RegRule("solji.kim", false)
+		
+	};
+	
+	/*
+	 * @return [ junkFoldersReg, isCaseSensitive(1: true, 0: false) ]
+	 */
+	private static RegRule[] junkFoldersReg = new RegRule [] {
+		new RegRule("U9A9磁力搜索", false),
+		new RegRule("solji.kim", false),
+		new RegRule("javplayer", false),
+		new RegRule("モザイク破壊版", true)
+	};
+	
 	private static List<String> subtitleExtensions = Arrays.asList(
 			"sub",
 			"idx",
+			"ass",
 			"srt"
 	);
 	
@@ -254,8 +310,10 @@ public class ComMediaUtil {
 	 * @return
 	 */
 	public static boolean isReservedFile(String filenameOnly) {
-		boolean shouldKeep = ("" + filenameOnly).toUpperCase().indexOf("_KEEP.") > 0;
-		return shouldKeep || reservedExtensions.contains(ComFileUtil.getFileExtension(filenameOnly, false).toLowerCase());
+		String lowerCase = ("" + filenameOnly).toLowerCase();
+		boolean shouldKeep = lowerCase.toUpperCase().indexOf("_KEEP.") > 0;
+		shouldKeep = shouldKeep || lowerCase.startsWith("cover.") || ComFileUtil.getFileName(lowerCase, false).endsWith("cover");
+		return shouldKeep || reservedExtensions.contains(ComFileUtil.getFileExtension(lowerCase, false));
 	}
 	
 	/**
@@ -308,9 +366,25 @@ public class ComMediaUtil {
 		return compressedFileExtensions.contains(extension);
 	}
 	
+	public static CheckResult checkJunkFile(String filenameOnly) {
+		return ComRegexUtil.testRegs(filenameOnly, junkFileNames);
+	}
 	public static boolean isJunkFileType(String filenameOnly) {
 		String extension = ComFileUtil.getFileExtension(filenameOnly, false).toLowerCase();
 		return junkFileExtensions.contains(extension);
+	}
+	
+	
+	/**
+	 * 
+	 * @param filenameOnly
+	 * @return {
+	 * 	result: 1 for isJunkFolder, otherwise is Not junkFolder,
+	 * 	reason: the reg that matched,
+	 * }
+	 */
+	public static CheckResult checkJunkFolder(String filenameOnly) {
+		return ComRegexUtil.testRegs(filenameOnly, junkFoldersReg);
 	}
 	
 	public static boolean isSubtitle(String filenameOnly) {
@@ -321,6 +395,18 @@ public class ComMediaUtil {
 	public static boolean isSubtitle(File filenameOnly) {
 		String extension = ComFileUtil.getFileExtension(filenameOnly, false).toLowerCase();
 		return subtitleExtensions.contains(extension);
+	}
+	
+	public static VideoResolution getVideoResolution(File file) throws Exception {
+		return FFProbeUtil.probeVideoResolution(file.getPath());
+	}
+	
+	public static VideoDuration getVideoDuration(File file) throws Exception {
+		return FFProbeUtil.probeVideoDuration(file.getPath());
+	}
+	
+	public static VideoDuration getVideoDuration(String file) throws Exception {
+		return FFProbeUtil.probeVideoDuration(file);
 	}
 	
 
