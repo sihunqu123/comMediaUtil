@@ -88,14 +88,18 @@ public class ComMediaUtil {
 
 
 	public static boolean mergeAV(File videoFile, File audioFile, String outputFile) {
-		return mergeAV(videoFile.getPath(), audioFile.getPath(), outputFile);
+		return mergeAV(videoFile.getPath(), audioFile.getPath(), outputFile, true);
 	}
 
 	public static boolean mergeAV(File videoFile, File audioFile, File outputFile) {
-		return mergeAV(videoFile.getPath(), audioFile.getPath(), outputFile.getPath());
+		return mergeAV(videoFile.getPath(), audioFile.getPath(), outputFile.getPath(), true);
+	}
+	
+	public static boolean mergeAV(File videoFile, File audioFile, String outputFile, boolean isRemoveSrcFiles) {
+		return mergeAV(videoFile.getPath(), audioFile.getPath(), outputFile, isRemoveSrcFiles);
 	}
 
-	public static boolean mergeAV(String videoFile, String audioFile, String outputFile) {
+	public static boolean mergeAV(String videoFile, String audioFile, String outputFile, boolean isRemoveSrcFiles) {
 		if(videoFile.equals(audioFile)) {
 			ComLogUtil.error("AV files are the same. - " + videoFile);
 			return false;
@@ -143,7 +147,7 @@ public class ComMediaUtil {
 				ComLogUtil.info(outputFile + " needChk mergeFailed.");
 				new File(videoFile_).renameTo(new File(videoFile));
 				new File(audioFile_).renameTo(new File(audioFile));
-				if(outputF.exists()) {//if output file generted, delete it.
+				if(outputF.exists() && isRemoveSrcFiles) {//if output file generted, delete it.
 					outputF.delete();
 				}
 				return false;
@@ -182,6 +186,8 @@ public class ComMediaUtil {
 			"ts",
 			"vob",
 			"mov",
+			"mpg",
+			"mpeg",
 			"m2ts",
 			"wmv",
 			"wmv",
